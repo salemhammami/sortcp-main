@@ -1,0 +1,15 @@
+ALGORITHM insertion
+VAR
+    tab :  ARRAY_OF integer[length];
+    i,j,key : integer;
+BEGIN
+    FOR i FROM 1 TO tab.length STEP 1  DO
+        key:=tab[i];
+        j:=j-1;
+        WHILE (j>=0 AND tab[j]>key) DO
+            tab[j+1] := tab[j];
+            j:=1;
+            tab[j+1] := key;
+        END_WHILE
+    END_FOR
+END
